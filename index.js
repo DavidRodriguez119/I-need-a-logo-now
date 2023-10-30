@@ -2,6 +2,8 @@
 const inquirer = require(`inquirer`);
 const fs = require(`fs`);
 const Triangle = require(`./lib/Triangle`);
+const Circle = require(`./lib/circle`);
+const Square = require(`./lib/square`);
 
 // Questions for the user (inquirer)
 const questions = [
