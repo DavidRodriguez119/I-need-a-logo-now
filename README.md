@@ -34,4 +34,3 @@ Node JavaScript NPM Inquirer Jest
 
 ## Video Demonstration
 
-https://drive.google.com/file/d/1R7Z5ubf2zaO70VnxEjGgTi0c8XMsjm8k/view?usp=sharing
