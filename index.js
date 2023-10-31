@@ -37,31 +37,43 @@ const questions = [
     },
 ];
 
-const answers = ``;
+// Global Variables
+let createShape = ``;
+let shapeParameters = {};
+
+// File Path
+const filePath = `./examples/logo.svg`
 
 const init = async () => {
-    answers = await inquirer.prompt(questions);
-    console.log(answers);
-    if (answers.type === `Triangle`) {
+    const answers = await inquirer.prompt(questions);
+    shapeParameters = {...answers}
+    if (shapeParameters.type === `Triangle`) {
         createTriangle();
-    } else if (answers.type === `Circle`){
+    } else if (shapeParameters.type === `Circle`){
         createCircle();
-    } else if (answers.type === `Square`){
+    } else if (shapeParameters.type === `Square`){
         createSquare();
     };
+    // generage SVG
+    fs.writeFile(filePath, createShape, (err) => {
+        err ? console.log(err) : console.log('Successfully created .svg file!')
+    });
+    console.log(createShape);
 };
 
 const createTriangle = () => {
-
+    const shape = new Triangle(shapeParameters.innerText, shapeParameters.textColor, shapeParameters.shapeColor);
+    createShape = shape.svgCode();
 };
 
 const createCircle = () => {
-
+    const shape = new Circle(shapeParameters.innerText, shapeParameters.textColor, shapeParameters.shapeColor);
+    createShape = shape.svgCode();
 };
 
 const createSquare = () => {
-
+    const shape = new Square(shapeParameters.innerText, shapeParameters.textColor, shapeParameters.shapeColor);
+    createShape = shape.svgCode();
 };
-
 
 init();

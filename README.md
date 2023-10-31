@@ -30,5 +30,8 @@ Node JavaScript NPM Inquirer Jest
 
 ## Screenshot of Running App
 
+![Screenshot of the running app](./assets/Screenshot%202023-10-31%20013656.png)
 
 ## Video Demonstration
+
+https://drive.google.com/file/d/1R7Z5ubf2zaO70VnxEjGgTi0c8XMsjm8k/view?usp=sharing
